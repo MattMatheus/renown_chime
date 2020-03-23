@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.7'
 
 services:
   app:
@@ -6,3 +6,7 @@ services:
     restart: always
     ports:
       - "${PORT}:8000"
+    volumes:
+      - type: bind
+        source: ~/chime_data_export/
+        target: /app/data
